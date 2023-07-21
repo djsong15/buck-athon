@@ -11,9 +11,14 @@ function imageElementGrab(){
     // console.log(arr);
     const img = document.querySelectorAll('img');
     // const test = document.querySelector('#conversion-ui')
-    for(let i =0; i<img.length; i++){
+    for (let i = 0; i < img.length; i++){
         img[i].src = 'images/japanflag.png'
     }
 
 }
-imageElementGrab();
+// imageElementGrab();
+chrome.runtime.onMessage.addListener(
+    function (request) {
+        if (request.message === 'start') imageElementGrab();
+    }
+)
