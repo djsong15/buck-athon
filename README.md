@@ -1,3 +1,3 @@
 # Buck-ify
 
-Ever wondered what the price of soap on Walmart.com was in a foreign currency? Me neither.
+A simple Google Chrome extension that converts currency between the top 15 exchanged currencies in the world and also updates prices on Walmart.com to a desired currency.
