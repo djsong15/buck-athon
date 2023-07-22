@@ -1,14 +1,15 @@
-chrome.runtime.onMessage.addListener(function (message) {
-  const contentData = message.data;
-  document
-    .querySelector("#calculate")
-    .addEventListener("click", calculate(contentData));
-});
+// chrome.runtime.onMessage.addListener(function (message) {
+//   const contentData = message.data;
+//   document
+//     .querySelector("#calculate")
+//     .addEventListener("click", calculate(contentData));
+// });
 
-async function calculate(data) {
-  const currAmt = data;
-  console.log(data);
-  document.querySelector("#currency-amt").value = data;
+async function calculate() {
+  // const currAmt = data;
+  // console.log(data);
+  // document.querySelector("#currency-amt").value = data;
+  const currAmt = document.querySelector('#currency-amt').value;
   const fromCurr = document.querySelector("#from-currency").value;
   const toCurr = document.querySelector("#to-currency").value;
   const result = await fetch(
@@ -22,3 +23,6 @@ async function calculate(data) {
     chrome.tabs.sendMessage(activeTab.id, { message: "start" });
   });
 }
+
+  document.querySelector('#calculate').addEventListener('click', calculate);
+  document.querySelector('#to-currency').addEventListener('change', calculate);
