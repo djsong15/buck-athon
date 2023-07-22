@@ -1,0 +1,43 @@
+body {
+    background-color: #1B8366;
+    height: 200px;
+    width: 200px;
+}
+
+img {
+    height: 20px;
+    width: 20px;
+}
+
+h1,
+label {
+    color: #FFDD0E;
+}
+
+#from-section,
+#to-section {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+#to-inputs {
+    display: flex;
+}
+
+#currency-amt {
+    width: 50px;
+}
+
+#result {
+    background-color: #ffffff;
+    width: 100px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid #a9a9a9
+}
+
+button {
+    background-color: #E9AE0B;
+    margin-top: 5px;
+}
