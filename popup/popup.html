@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buck-athon</title>
     <link rel="stylesheet" href="popup.css" type="text/css" />
-    <!-- <script type="module">
-        import cheerio from 'https://cdn.jsdelivr.net/npm/cheerio@1.0.0-rc.12/+esm'
-        </script> -->
     <script src="popup-script.js" defer type="text/javascript"></script>
-
-    <!-- <script src="amazonscript.js" defer type="text/javascript"></script> -->
   </head>
   <body>
     <main>
@@ -23,9 +18,21 @@
           <select name="from-currency" id="from-currency">
             <option value="USD" selected>USD</option>
             <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
             <option value="JPY">JPY</option>
+            <option value="GBP">GBP</option>
+            <option value="CNY">CNY</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="HKD">HKD</option>
+            <option value="SGD">SGD</option>
+            <option value="SEK">SEK</option>
+            <option value="KRW">KRW</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="INR">INR</option>
           </select>
+          <input id="currency-amt" type="text" />
         </div>
         <div>
           <label for="to-currency">TO: </label>
@@ -34,14 +41,25 @@
           <select name="to-currency" id="to-currency">
             <option value="USD">USD</option>
             <option value="EUR" selected>EUR</option>
-            <option value="GBP">GBP</option>
             <option value="JPY">JPY</option>
+            <option value="GBP">GBP</option>
+            <option value="CNY">CNY</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="HKD">HKD</option>
+            <option value="SGD">SGD</option>
+            <option value="SEK">SEK</option>
+            <option value="KRW">KRW</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="INR">INR</option>
           </select>
         </div>
-        <input id="currency-amt" type="text" />
         <div id="result"></div>
       </div>
       <button id="calculate">Convert</button>
+      <button id="convert">Update Price</button>
     </main>
   </body>
 </html>
