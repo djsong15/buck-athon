@@ -9,54 +9,58 @@
   </head>
   <body>
     <main>
-      <h1>buck-athon</h1>
+      <h1>buck-ify</h1>
       <div id="conversion-ui">
-        <div>
-          <label for="from-currency">FROM: </label>
-        </div>
-        <div>
-          <select name="from-currency" id="from-currency">
-            <option value="USD" selected>USD</option>
-            <option value="EUR">EUR</option>
-            <option value="JPY">JPY</option>
-            <option value="GBP">GBP</option>
-            <option value="CNY">CNY</option>
-            <option value="AUD">AUD</option>
-            <option value="CAD">CAD</option>
-            <option value="CHF">CHF</option>
-            <option value="HKD">HKD</option>
-            <option value="SGD">SGD</option>
-            <option value="SEK">SEK</option>
-            <option value="KRW">KRW</option>
-            <option value="NOK">NOK</option>
-            <option value="NZD">NZD</option>
-            <option value="INR">INR</option>
-          </select>
-          <input id="currency-amt" type="text" />
-        </div>
-        <div>
-          <label for="to-currency">TO: </label>
-        </div>
-        <div>
-          <select name="to-currency" id="to-currency">
-            <option value="USD">USD</option>
-            <option value="EUR" selected>EUR</option>
-            <option value="JPY">JPY</option>
-            <option value="GBP">GBP</option>
-            <option value="CNY">CNY</option>
-            <option value="AUD">AUD</option>
-            <option value="CAD">CAD</option>
-            <option value="CHF">CHF</option>
-            <option value="HKD">HKD</option>
-            <option value="SGD">SGD</option>
-            <option value="SEK">SEK</option>
-            <option value="KRW">KRW</option>
-            <option value="NOK">NOK</option>
-            <option value="NZD">NZD</option>
-            <option value="INR">INR</option>
-          </select>
-        </div>
-        <div id="result"></div>
+        <section id="from-section">
+          <div>
+            <label for="from-currency">FROM: </label>
+          </div>
+          <div id="from-inputs">
+            <select name="from-currency" id="from-currency">
+              <option value="USD" selected>USD</option>
+              <option value="EUR">EUR</option>
+              <option value="JPY">JPY</option>
+              <option value="GBP">GBP</option>
+              <option value="CNY">CNY</option>
+              <option value="AUD">AUD</option>
+              <option value="CAD">CAD</option>
+              <option value="CHF">CHF</option>
+              <option value="HKD">HKD</option>
+              <option value="SGD">SGD</option>
+              <option value="SEK">SEK</option>
+              <option value="KRW">KRW</option>
+              <option value="NOK">NOK</option>
+              <option value="NZD">NZD</option>
+              <option value="INR">INR</option>
+            </select>
+            <input id="currency-amt" type="text" />
+          </div>
+        </section>
+        <section id="to-section">
+          <div>
+            <label for="to-currency">TO: </label>
+          </div>
+          <div id="to-inputs">
+            <select name="to-currency" id="to-currency">
+              <option value="USD">USD</option>
+              <option value="EUR" selected>EUR</option>
+              <option value="JPY">JPY</option>
+              <option value="GBP">GBP</option>
+              <option value="CNY">CNY</option>
+              <option value="AUD">AUD</option>
+              <option value="CAD">CAD</option>
+              <option value="CHF">CHF</option>
+              <option value="HKD">HKD</option>
+              <option value="SGD">SGD</option>
+              <option value="SEK">SEK</option>
+              <option value="KRW">KRW</option>
+              <option value="NOK">NOK</option>
+              <option value="NZD">NZD</option>
+              <option value="INR">INR</option>
+            </select>
+            <div id="result"></div>
+          </div>
+        </section>
       </div>
       <button id="calculate">Convert</button>
       <button id="convert">Update Price</button>
