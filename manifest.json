@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Buck-athon",
+    "name": "Buck-ify",
     "description": "Base Level Extension",
     "version": "1.0",
     "author": "Albert Hu & Daniel Song",
@@ -9,7 +9,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["<all_urls>"],
+        "matches": ["https://www.walmart.com/*"],
         "js": ["content.js"]
       }
     ],
