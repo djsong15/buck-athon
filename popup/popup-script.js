@@ -1,10 +1,3 @@
-// chrome.runtime.onMessage.addListener(function (message) {
-//   const contentData = message.data;
-//   document
-//     .querySelector("#calculate")
-//     .addEventListener("click", calculate(contentData));
-// });
-
 const currencySymbols = {
   'USD': '$',
   'EUR': '€',
@@ -37,10 +30,6 @@ async function calculate() {
   console.log(convertedAmt);
 
   document.querySelector("#result").textContent = convertedAmt;
-  // chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-  //   let activeTab = tabs[0];
-  //   chrome.tabs.sendMessage(activeTab.id, { message: "start" });
-  // });
   return convertedAmt;
 }
 
