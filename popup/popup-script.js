@@ -24,10 +24,8 @@ const currencySymbols = {
 }
 
 async function calculate() {
-  // const currAmt = data;
-  // console.log(data);
-  // document.querySelector("#currency-amt").value = data;
   const currAmt = document.querySelector('#currency-amt').value;
+  if (!currAmt) return;
   const fromCurr = document.querySelector("#from-currency").value;
   const toCurr = document.querySelector("#to-currency").value;
   const result = await fetch(
@@ -43,8 +41,19 @@ async function calculate() {
   //   let activeTab = tabs[0];
   //   chrome.tabs.sendMessage(activeTab.id, { message: "start" });
   // });
+  return convertedAmt;
 }
 
-  document.querySelector('#calculate').addEventListener('click', calculate);
-  document.querySelector('#to-currency').addEventListener('change', calculate);
-  document.querySelector('#from-currency').addEventListener('change', calculate);
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('#convert').addEventListener('click', () => {
+    chrome.tabs.query({currentWindow: true, active: true}, (tabs) => {
+      let activeTab = tabs[0];
+      chrome.tabs.sendMessage(activeTab.id, {"toConv": document.querySelector("#to-currency").value});
+      console.log('sent');
+    });
+  });
+})
+
+document.querySelector('#calculate').addEventListener('click', calculate);
+document.querySelector('#to-currency').addEventListener('change', calculate);
+document.querySelector('#from-currency').addEventListener('change', calculate);
