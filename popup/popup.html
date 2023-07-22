@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buck-athon</title>
-    <link rel="stylesheet" href="popup.css" type="text/css">
+    <link rel="stylesheet" href="popup.css" type="text/css" />
     <!-- <script type="module">
         import cheerio from 'https://cdn.jsdelivr.net/npm/cheerio@1.0.0-rc.12/+esm'
         </script> -->
     <script src="popup-script.js" defer type="text/javascript"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- <script src="amazonscript.js" defer type="text/javascript"></script> -->
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <h1>buck-athon</h1>
-        <div id="conversion-ui">
-            <div>
-                <label for="from-currency">FROM: </label>
-                <select name="from-currency" id="from-currency">
-                    <option value="USD" selected>USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="GBP">GBP</option>
-                    <option value="JPY">JPY</option>
-                </select>
-            </div>
-            <div>
-                <label for="to-currency">TO: </label>
-                <select name="to-currency" id="to-currency">
-                    <option value="USD">USD</option>
-                    <option value="EUR" selected>EUR</option>
-                    <option value="GBP">GBP</option>
-                    <option value="JPY">JPY</option>
-                </select>
-            </div>
-            <input id="currency-amt" type="text">
-            <div id="result"></div>
+      <h1>buck-athon</h1>
+      <div id="conversion-ui">
+        <div>
+          <label for="from-currency">FROM: </label>
         </div>
-        <button id="calculate">Calculate</button>
+        <div>
+          <select name="from-currency" id="from-currency">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+          </select>
+        </div>
+        <div>
+          <label for="to-currency">TO: </label>
+        </div>
+        <div>
+          <select name="to-currency" id="to-currency">
+            <option value="USD">USD</option>
+            <option value="EUR" selected>EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+          </select>
+        </div>
+        <input id="currency-amt" type="text" />
+        <div id="result"></div>
+      </div>
+      <button class="btn btn-primary" id="calculate">Convert</button>
     </main>
-</body>
+  </body>
 </html>
